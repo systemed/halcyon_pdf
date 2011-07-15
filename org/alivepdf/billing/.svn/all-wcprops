@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/269/trunk/AlivePDFBeta/src/org/alivepdf/billing
+END
+Company.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/265/trunk/AlivePDFBeta/src/org/alivepdf/billing/Company.as
+END
+Currency.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/265/trunk/AlivePDFBeta/src/org/alivepdf/billing/Currency.as
+END
+Invoice.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/269/trunk/AlivePDFBeta/src/org/alivepdf/billing/Invoice.as
+END

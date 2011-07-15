@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/249/trunk/AlivePDFBeta/src/org/alivepdf/drawing
+END
+DashedLine.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/206/trunk/AlivePDFBeta/src/org/alivepdf/drawing/DashedLine.as
+END
+Joint.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/249/trunk/AlivePDFBeta/src/org/alivepdf/drawing/Joint.as
+END
+Blend.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/206/trunk/AlivePDFBeta/src/org/alivepdf/drawing/Blend.as
+END
+Caps.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/206/trunk/AlivePDFBeta/src/org/alivepdf/drawing/Caps.as
+END
+WindingRule.as
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/206/trunk/AlivePDFBeta/src/org/alivepdf/drawing/WindingRule.as
+END
+SectorDrawingCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/249/trunk/AlivePDFBeta/src/org/alivepdf/drawing/SectorDrawingCommand.as
+END

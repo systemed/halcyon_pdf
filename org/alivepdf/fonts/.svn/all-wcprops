@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/268/trunk/AlivePDFBeta/src/org/alivepdf/fonts
+END
+FontMetrics.as
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/223/trunk/AlivePDFBeta/src/org/alivepdf/fonts/FontMetrics.as
+END
+CoreFont.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/261/trunk/AlivePDFBeta/src/org/alivepdf/fonts/CoreFont.as
+END
+IFont.as
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/261/trunk/AlivePDFBeta/src/org/alivepdf/fonts/IFont.as
+END
+ICidFont.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/223/trunk/AlivePDFBeta/src/org/alivepdf/fonts/ICidFont.as
+END
+EmbeddedFont.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/236/trunk/AlivePDFBeta/src/org/alivepdf/fonts/EmbeddedFont.as
+END
+AFMParser.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/268/trunk/AlivePDFBeta/src/org/alivepdf/fonts/AFMParser.as
+END
+Style.as
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/223/trunk/AlivePDFBeta/src/org/alivepdf/fonts/Style.as
+END
+FontCollection.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/260/trunk/AlivePDFBeta/src/org/alivepdf/fonts/FontCollection.as
+END
+FontCollections.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/260/trunk/AlivePDFBeta/src/org/alivepdf/fonts/FontCollections.as
+END
+CodePage.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/223/trunk/AlivePDFBeta/src/org/alivepdf/fonts/CodePage.as
+END
+FontType.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/239/trunk/AlivePDFBeta/src/org/alivepdf/fonts/FontType.as
+END
+FontFamily.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/206/trunk/AlivePDFBeta/src/org/alivepdf/fonts/FontFamily.as
+END
+FontDescription.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/235/trunk/AlivePDFBeta/src/org/alivepdf/fonts/FontDescription.as
+END
+FontFilter.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/223/trunk/AlivePDFBeta/src/org/alivepdf/fonts/FontFilter.as
+END

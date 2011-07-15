@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/277/trunk/AlivePDFBeta/src/org/alivepdf/images/gif/encoder
+END
+NeuQuant.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/277/trunk/AlivePDFBeta/src/org/alivepdf/images/gif/encoder/NeuQuant.as
+END
+GIFEncoder.as
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/277/trunk/AlivePDFBeta/src/org/alivepdf/images/gif/encoder/GIFEncoder.as
+END
+LZWEncoder.as
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/277/trunk/AlivePDFBeta/src/org/alivepdf/images/gif/encoder/LZWEncoder.as
+END

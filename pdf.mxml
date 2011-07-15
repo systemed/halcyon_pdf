@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application  xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute"
+	 viewSourceURL="srcview/index.html">
+ 
+	<mx:Script>
+		<![CDATA[
+			import org.alivepdf.pdf.PDF;
+			import org.alivepdf.colors.*;
+			import org.alivepdf.display.Display;
+			import org.alivepdf.drawing.DashedLine;
+			import org.alivepdf.fonts.*;
+			import org.alivepdf.images.ColorSpace;
+			import org.alivepdf.layout.*;
+			import org.alivepdf.pages.Page;
+			import org.alivepdf.saving.Method;
+
+			import net.systemeD.halcyonpdf.ImageBank;
+			import net.systemeD.halcyonpdf.connection.*;
+			import net.systemeD.halcyonpdf.pdfrenderer.*;
+			import net.systemeD.halcyonpdf.styleparser.*;
+
+			private var loadingStage:uint=0;		// incremented by 1 each time a dependency is loaded!
+													// ** FIXME: this means it won't trigger if there are no images to load...
+			public var connection:XMLConnection;
+			public var ruleset:RuleSet;
+			public var list:DisplayList;
+			public var spec:MapSpec;
+
+			public function drawPDF():void {
+				spec=new MapSpec();
+				spec.minlon=-2.228; spec.minlat=52.188;
+				spec.maxlon=-2.216; spec.maxlat=52.2;
+				spec.minscale=12; spec.maxscale=18; spec.scale=15;
+				spec.minlayer=-5; spec.maxlayer=5;
+				spec.boxheight=575; spec.boxwidth=822;	// A4, -10pt margin on either side
+				spec.boxoriginx=10; spec.boxoriginy=10;
+				spec.initProjection();
+
+				connection=new XMLConnection("root",
+					"http://www.openstreetmap.org/api/0.6/",
+					"http://www.openstreetmap.org/api/crossdomain.xml",
+					{});
+				connection.loadBbox(spec.minlon, spec.maxlon, spec.maxlat, spec.minlat);
+				connection.addEventListener(Connection.LOAD_COMPLETED, loadedMapData);
+				ruleset=new RuleSet(spec.minscale, spec.maxscale, loadedCSS, loadedCSSImages);
+				ruleset.loadFromCSS("http://127.0.0.1/~richard/stylesheets/potlatch.css");
+					
+//				ImageBank.getInstance().addEventListener(ImageBank.IMAGES_LOADED, readyToGo);
+//				ImageBank.getInstance().loadPDFImage("/~richard/cc/graphics/routes.png");
+			}
+			
+			private function loadedCSS():void { trace("loadedCSS"); readyToGo(); }
+			private function loadedCSSImages():void { trace("loadedCSSImages"); readyToGo(); }
+			private function loadedMapData(event:Event):void { trace("loadedMapData"); readyToGo(); }
+
+			private function readyToGo(event:Event=null):void {
+				loadingStage++;
+				if (loadingStage==3) beginPDF();
+			}
+
+
+			public function beginPDF():void {
+				// create displayLists
+				list=new DisplayList(ruleset, spec);
+				var entities:Object=connection.getObjectsByBbox(spec.minlon, spec.maxlon, spec.maxlat, spec.minlat);
+				for each (var way:Way in entities.waysInside)
+					list.compileWay(way);
+				for each (var poi:Node in entities.poisInside)
+					list.compilePOI(poi);
+				
+				// make PDF from displayLists
+				var pdf:PDF = new PDF(Orientation.LANDSCAPE, Unit.POINT, false, Size.A4);
+				pdf.setDisplayMode(Display.FULL_WIDTH); 
+				pdf.addPage();
+				pdf.clippingRect(spec.boxoriginx, spec.boxoriginy, spec.boxwidth, spec.boxheight);
+				list.draw(pdf);
+				pdf.unsetClipping();
+
+				// output PDF
+				pdf.save(Method.REMOTE, "cgi-bin/echo.cgi", "drawing.pdf");
+			}
+
+		]]>
+	</mx:Script>
+	<mx:Button horizontalCenter="0" click="drawPDF()" label="Generate PDF" id="generate_btn" />
+</mx:Application>
